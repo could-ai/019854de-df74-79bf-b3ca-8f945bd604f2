@@ -9,38 +9,33 @@ class NewZealandNewsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<NewsArticle> newsArticles = [
       NewsArticle(
-        title: '纽航任命新任CEO，为公司内部提拔，具备丰富的数字化转型经验',
-        source: 'RNZ',
-        publishedDate: '2025-07-30',
-      ),
-      NewsArticle(
-        title: '新西兰外长温斯顿·彼得斯呼吁更多国家加入倡议，要求以色列结束加沙战争',
-        source: 'RNZ',
-        publishedDate: '2025-07-30',
-      ),
-      NewsArticle(
-        title: '新西兰政府确认有意承认巴勒斯坦主权国家地位',
-        source: '本地新闻综合',
-        publishedDate: '2025-07-30',
-      ),
-      NewsArticle(
         title: '专家呼吁雇主重新审视年龄歧视问题，强调忠诚的老员工价值',
         source: '行业报告',
         publishedDate: '2025-07-30',
       ),
       NewsArticle(
-        title: '新西兰多地出现强降雨，塔斯曼地区民防部门加强力量',
-        source: '气象局',
+        title: '新西兰医疗系统罢工24小时，超3.6万名医护人员参与',
+        source: '卫生局',
         publishedDate: '2025-07-30',
       ),
       NewsArticle(
-        title: '财政部长宣布提高家庭育儿补贴比例',
-        source: '政府公告',
+        title: '南北地区出现风雪天气，美食推荐温暖寒冬',
+        source: '本地新闻',
         publishedDate: '2025-07-30',
       ),
       NewsArticle(
-        title: '奥克兰高端购物中心发生持刀伤人事件，24岁男子被控且不能保释',
-        source: 'NZ Herald',
+        title: '2025年奥克兰市地方选举候选人提名已正式开启',
+        source: '选举委员会',
+        publishedDate: '2025-07-30',
+      ),
+      NewsArticle(
+        title: '新西兰楼市逐步降温，两年期房贷利率降至5.08%',
+        source: '财经新闻',
+        publishedDate: '2025-07-30',
+      ),
+      NewsArticle(
+        title: '警方继续追查奥克兰刺杀案，遗体告别仪式已举行',
+        source: '警方公告',
         publishedDate: '2025-07-30',
       ),
     ];
