@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:password_manager/models/news_article_model.dart';
+import 'package:password_manager/screens/thailand_cambodia_news_screen.dart';
 import 'package:password_manager/screens/vietnam_news_screen.dart';
 
 class PasswordListScreen extends StatefulWidget {
@@ -17,7 +17,18 @@ class _PasswordListScreenState extends State<PasswordListScreen> {
         title: const Text('Passwords'),
         actions: [
           IconButton(
-            icon: const Icon(Icons.article),
+            icon: const Icon(Icons.flag_outlined),
+            tooltip: 'Thailand-Cambodia News',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ThailandCambodiaNewsScreen()),
+              );
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.article_outlined),
+            tooltip: 'Vietnam News',
             onPressed: () {
               Navigator.push(
                 context,
