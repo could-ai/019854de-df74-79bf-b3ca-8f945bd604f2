@@ -1,42 +1,48 @@
 import 'package:flutter/material.dart';
-import '../models/password_model.dart';
-import '../widgets/password_list_item.dart';
+import 'package:password_manager/models/news_article_model.dart';
+import 'package:password_manager/screens/vietnam_news_screen.dart';
 
 class PasswordListScreen extends StatefulWidget {
-  const PasswordListScreen({Key? key}) : super(key: key);
+  const PasswordListScreen({super.key});
 
   @override
-  _PasswordListScreenState createState() => _PasswordListScreenState();
+  State<PasswordListScreen> createState() => _PasswordListScreenState();
 }
 
 class _PasswordListScreenState extends State<PasswordListScreen> {
-  // Dummy data for demonstration
-  final List<Password> _passwords = [
-    Password(id: '1', siteName: 'Google', username: 'user@gmail.com', password: 'password123'),
-    Password(id: '2', siteName: 'Facebook', username: 'user@facebook.com', password: 'password456'),
-    Password(id: '3', siteName: 'Twitter', username: 'user@twitter.com', password: 'password789'),
-    Password(id: '4', siteName: 'Github', username: 'user@github.com', password: 'password101'),
-    Password(id: '5', siteName: 'LinkedIn', username: 'user@linkedin.com', password: 'password112'),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Password Manager'),
+        title: const Text('Passwords'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.article),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const VietnamNewsScreen()),
+              );
+            },
+          ),
+        ],
       ),
       body: ListView.builder(
-        itemCount: _passwords.length,
+        itemCount: 5, // Replace with actual password list length
         itemBuilder: (context, index) {
-          return PasswordListItem(password: _passwords[index]);
+          // Replace with actual password data
+          return const ListTile(
+            leading: Icon(Icons.vpn_key),
+            title: Text('Website Name'),
+            subtitle: Text('username'),
+          );
         },
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // In a real app, this would open a screen to add a new password.
+          // Add functionality to add a new password
         },
         child: const Icon(Icons.add),
-        tooltip: 'Add Password',
       ),
     );
   }
