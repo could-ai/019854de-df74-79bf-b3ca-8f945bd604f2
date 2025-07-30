@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:password_manager/screens/new_zealand_news_screen.dart';
 import 'package:password_manager/screens/thailand_cambodia_news_screen.dart';
 import 'package:password_manager/screens/vietnam_news_screen.dart';
 
@@ -16,6 +17,16 @@ class _PasswordListScreenState extends State<PasswordListScreen> {
       appBar: AppBar(
         title: const Text('Passwords'),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.public),
+            tooltip: 'New Zealand News',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const NewZealandNewsScreen()),
+              );
+            },
+          ),
           IconButton(
             icon: const Icon(Icons.flag_outlined),
             tooltip: 'Thailand-Cambodia News',
