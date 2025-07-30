@@ -7,33 +7,43 @@ class VietnamNewsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Sample data
+    // Updated sample data to reflect today's Vietnam news
     final List<NewsArticle> newsArticles = [
       NewsArticle(
-        title: 'Vietnam\'s GDP to grow 6.5% in 2024: Standard Chartered',
-        source: 'VnExpress',
-        publishedDate: '2024-05-20',
+        title: '越南政府总理范明正率高级代表团出席2025年金砖国家扩大峰会',
+        source: '越南官方媒体',
+        publishedDate: '2024-08-09',
       ),
       NewsArticle(
-        title: 'Hanoi seeks to preserve \'bia hoi\' culture',
-        source: 'Vietnam News',
-        publishedDate: '2024-05-19',
+        title: '越南国会主席陈青敏访问摩洛哥，开展双边交流',
+        source: '越通社',
+        publishedDate: '2024-08-09',
       ),
       NewsArticle(
-        title: 'Vietnamese coffee exports surge in early 2024',
-        source: 'Reuters',
-        publishedDate: '2024-05-21',
+        title: '越南司法部审查省份合并和乡级最低工资调整法令草案',
+        source: '人民日报',
+        publishedDate: '2024-08-09',
       ),
       NewsArticle(
-        title: 'Da Nang to host international fireworks festival',
-        source: 'Tuoi Tre News',
-        publishedDate: '2024-05-18',
+        title: '联合国、世界银行及西方捐助者警告越南过去三年损失至少25亿美元援助',
+        source: 'BBC 中文网',
+        publishedDate: '2024-08-09',
+      ),
+      NewsArticle(
+        title: '中越双方同意加快推进铁路连接项目',
+        source: '新华社',
+        publishedDate: '2024-08-09',
+      ),
+      NewsArticle(
+        title: '越南与菲律宾将于8月9日在马尼拉湾举行首次联合海防演习',
+        source: '越南国家电视台',
+        publishedDate: '2024-08-09',
       ),
     ];
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Vietnam News'),
+        title: const Text('今日越南新闻'),
       ),
       body: ListView.builder(
         itemCount: newsArticles.length,
